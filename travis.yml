@@ -1,7 +1,0 @@
-dist: trusty  
-sudo: required  
-install: sudo bash -c "$(curl -fsSL https://s3.amazonaws.com/tools.nanobox.io/bootstrap/ci.sh)"  
-script: nanobox run mix test  
-after_success:  
-  - nanobox remote add nanobox_phoenix_phoenix
-  - nanobox deploy
