@@ -6,15 +6,15 @@
 use Mix.Config
 
 # General application configuration
-config :gaslight_project,
-  ecto_repos: [GaslightProject.Repo]
+config :nanobox_phoenix,
+  ecto_repos: [NanoBoxPhoenix.Repo]
 
 # Configures the endpoint
-config :gaslight_project, GaslightProject.Web.Endpoint,
+config :nanobox_phoenix, NanoBoxPhoenix.Web.Endpoint,
   url: [host: "localhost"],
   secret_key_base: "PT8ON2AJZGQ2O8aiGelnmMkTYu8Y9PJxbENP20HjRaRMiXDAHhUoDvZYnXGQmLsk",
-  render_errors: [view: GaslightProject.Web.ErrorView, accepts: ~w(html json)],
-  pubsub: [name: GaslightProject.PubSub,
+  render_errors: [view: NanoBoxPhoenix.Web.ErrorView, accepts: ~w(html json)],
+  pubsub: [name: NanoBoxPhoenix.PubSub,
            adapter: Phoenix.PubSub.PG2]
 
 # Configures Elixir's Logger

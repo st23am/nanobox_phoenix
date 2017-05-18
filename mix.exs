@@ -1,8 +1,8 @@
-defmodule GaslightProject.Mixfile do
+defmodule NanoBoxPhoenix.Mixfile do
   use Mix.Project
 
   def project do
-    [app: :gaslight_project,
+    [app: :nanobox_phoenix,
      version: "0.0.1",
      elixir: "~> 1.4",
      elixirc_paths: elixirc_paths(Mix.env),
@@ -16,7 +16,7 @@ defmodule GaslightProject.Mixfile do
   #
   # Type `mix help compile.app` for more information.
   def application do
-    [mod: {GaslightProject.Application, []},
+    [mod: {NanoBoxPhoenix.Application, []},
      extra_applications: [:logger, :runtime_tools]]
   end
 
@@ -28,12 +28,17 @@ defmodule GaslightProject.Mixfile do
   #
   # Type `mix help deps` for examples and options.
   defp deps do
-    [{:phoenix, "~> 1.3.0-rc"},
+    [
+     {:credo, "~> 0.8.0-rc"},
+     {:ex_machina, "~> 2.0", only: [:dev, :test]},
+     {:faker, "~> 0.8.0", only: [:dev, :test]},
+     {:phoenix, "~> 1.3.0-rc"},
      {:phoenix_pubsub, "~> 1.0"},
      {:phoenix_ecto, "~> 3.2"},
      {:postgrex, ">= 0.0.0"},
      {:phoenix_html, "~> 2.6"},
      {:phoenix_live_reload, "~> 1.0", only: :dev},
+     {:hound, "~> 1.0", only: [:test]},
      {:gettext, "~> 0.11"},
      {:cowboy, "~> 1.0"}]
   end

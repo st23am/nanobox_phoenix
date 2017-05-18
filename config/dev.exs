@@ -6,7 +6,7 @@ use Mix.Config
 # The watchers configuration can be used to run external
 # watchers to your application. For example, we use it
 # with brunch.io to recompile .js and .css sources.
-config :gaslight_project, GaslightProject.Web.Endpoint,
+config :nanobox_phoenix, NanoBoxPhoenix.Web.Endpoint,
   http: [port: 4000],
   debug_errors: true,
   code_reloader: true,
@@ -31,13 +31,13 @@ config :gaslight_project, GaslightProject.Web.Endpoint,
 # different ports.
 
 # Watch static and templates for browser reloading.
-config :gaslight_project, GaslightProject.Web.Endpoint,
+config :nanobox_phoenix, NanoBoxPhoenix.Web.Endpoint,
   live_reload: [
     patterns: [
       ~r{priv/static/.*(js|css|png|jpeg|jpg|gif|svg)$},
       ~r{priv/gettext/.*(po)$},
-      ~r{lib/gaslight_project/web/views/.*(ex)$},
-      ~r{lib/gaslight_project/web/templates/.*(eex)$}
+      ~r{lib/nanobox_phoenix/web/views/.*(ex)$},
+      ~r{lib/nanobox_phoenix/web/templates/.*(eex)$}
     ]
   ]
 
@@ -49,10 +49,10 @@ config :logger, :console, format: "[$level] $message\n"
 config :phoenix, :stacktrace_depth, 20
 
 # Configure your database
-config :gaslight_project, GaslightProject.Repo,
+config :nanobox_phoenix, NanoBoxPhoenix.Repo,
   adapter: Ecto.Adapters.Postgres,
   username: System.get_env("DATA_DB_USER"),
   password: System.get_env("DATA_DB_PASS"),
   hostname: System.get_env("DATA_DB_HOST"),
-  database: "gaslight_project_dev",
+  database: "nanobox_phoenix_dev",
   pool_size: 10

@@ -1,4 +1,4 @@
-# GaslightProject
+# NanoBoxPhoenix
 
 To start your Phoenix server:
 
