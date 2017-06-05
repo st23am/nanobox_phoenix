@@ -13,22 +13,26 @@
 
   <body>
     <div class="container">
-      <header class="header">
-        <nav role="navigation">
-          <ul class="nav nav-pills pull-right">
-            <li><a href="#">Login</a></li>
+      <section class="header">
+        <h2 class="title"><%= app_name() %></h2>
+      </section>
+      <div class="navbar-spacer"></div>
+      <nav class="navbar" role="navigation">
+        <div class="container">
+          <ul class="navbar-list">
+            <li class="navbar-item">
+              <a href="#" class="navbar-link">Login</a>
+            </li>
           </ul>
-        </nav>
-        <h1><%= app_name() %></h1>
-      </header>
-
+        </div>
+      </nav>
       <p class="alert alert-info" role="alert"><%= get_flash(@conn, :info) %></p>
       <p class="alert alert-danger" role="alert"><%= get_flash(@conn, :error) %></p>
-
+    </div>
+    <div class="container">
       <main role="main">
         <%= render @view_module, @view_template, assigns %>
       </main>
-
     </div> <!-- /container -->
     <script src="<%= static_path(@conn, "/js/app.js") %>"></script>
   </body>
